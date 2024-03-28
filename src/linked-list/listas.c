@@ -18,6 +18,16 @@ void imprimir(Lista* l){
 
 }
 
+void imprimir_inversa(Lista* l){
+
+	if(l == NULL)
+		return;
+
+	imprimir_inversa(l->prox);
+	printf("Valor da lista inversa: %d\n", l->info);
+}
+
+
 Lista* retirar(Lista* l, int v){
 	Lista* p;
 	Lista* ant;
@@ -54,3 +64,11 @@ void apaga_lista(Lista* l){
 	printf("Removendo: %d\n", l->info);
 	free(l);
 }
+
+int lista_comprimento(Lista* l){
+	int i;
+	Lista* p;
+	for(p = l, i = 0; p != NULL; p = p->prox, i++);
+	return i;
+}
+

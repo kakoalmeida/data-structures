@@ -15,5 +15,8 @@ Lista* retirar(Lista* l, int v);
 void imprimir(Lista* l);
 void apaga_lista(Lista* l);
 int verifica_lista(Lista* l);
+int lista_comprimento(Lista* l);
+void imprimir_inversa(Lista* l);
+
 
 #endif

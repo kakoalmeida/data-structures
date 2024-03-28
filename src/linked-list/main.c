@@ -3,6 +3,7 @@
 int main(){
 	
 	Lista* l;
+	int i;
 	l  = cria_lista();
 
 	printf("Lista criada!\n");
@@ -18,11 +19,17 @@ int main(){
                 printf("Lista NAO liberada\n");
 
 	imprimir(l);
+	printf("\n");
+	imprimir_inversa(l);
+
+	printf("Tamanho da lista: %d\n", lista_comprimento(l));
 
 	l = retirar(l, 16);
 
 	printf("Um elemento removido da lista\n");
 	imprimir(l);
+
+        printf("Tamanho da lista: %d\n", lista_comprimento(l));
 
 	apaga_lista(l);
 	
