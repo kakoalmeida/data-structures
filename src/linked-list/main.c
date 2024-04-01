@@ -22,11 +22,25 @@ int main(){
 	printf("\n");
 	imprimir_inversa(l);
 
+	Lista* l2;
 	printf("Tamanho da lista: %d\n", lista_comprimento(l));
+	l2 = cria_lista();
+	l2 = inserir(l2, 1);
+	l2 = inserir(l2, 3);
+	l2 = inserir(l2, 5);
+	l2 = inserir(l2, 7);
+	
+	printf("\nLista2\n");
+	imprimir(l2);
 
+	printf("\nListas concatenadas\n");
+	Lista* l3;
+	l3 = lista_intercalar(l, l2);
+
+	imprimir(l3);
 	l = retirar(l, 16);
 
-	printf("Um elemento removido da lista\n");
+	printf("\nUm elemento removido da lista\n");
 	imprimir(l);
 
         printf("Tamanho da lista: %d\n", lista_comprimento(l));

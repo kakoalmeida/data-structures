@@ -72,3 +72,42 @@ int lista_comprimento(Lista* l){
 	return i;
 }
 
+Lista* lista_intercalar(Lista* l1, Lista* l2){
+	Lista* listaResultado = NULL;
+	Lista* aux = NULL;
+	
+	if(l1 == NULL && l2 == NULL)
+		return NULL;
+
+	if(l1 == NULL)
+		return l2;
+	
+	if(l2 == NULL)
+		return l1;
+
+	while(l1 != NULL && l2 != NULL){
+		if(listaResultado == NULL){
+			listaResultado = inserir(listaResultado, l1->info);
+			aux = listaResultado;
+		} else {
+			aux->prox = inserir(aux, l1->info);
+			aux = aux->prox;
+		}
+		l1 = l1->prox;
+		
+		if(l1 != NULL){
+			aux->prox = inserir(aux, l2->info);
+			aux = aux->prox;
+			l2 = l2->prox;
+		}
+	}
+
+	if(l1 != NULL){
+		aux->prox = l1;
+	} else if(l2 != NULL){
+		aux->prox = l2;
+	}	
+
+
+	return listaResultado;
+}

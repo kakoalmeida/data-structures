@@ -17,6 +17,7 @@ void apaga_lista(Lista* l);
 int verifica_lista(Lista* l);
 int lista_comprimento(Lista* l);
 void imprimir_inversa(Lista* l);
+Lista* lista_intercalar(Lista* l1, Lista* l2);
 
 
 #endif
