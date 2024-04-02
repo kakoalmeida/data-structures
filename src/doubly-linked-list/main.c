@@ -23,6 +23,9 @@ int main(){
 	l = remover(l, 3);
 
 	imprimir(l);
+
+	printf("\nApagando lista:\n");
+	apagar(l);
 	
 
 	return 0;

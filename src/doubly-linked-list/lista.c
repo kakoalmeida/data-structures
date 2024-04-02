@@ -46,3 +46,14 @@ Lista* remover(Lista* l, int v){
 	free(p);
 	return l;
 }
+
+void apagar(Lista* l){
+	Lista* p;
+	for(p = l->prox; p != NULL; p = p->prox){
+		printf("\nRemovendo %d ", l->info);
+		free(l);
+		l = p;
+	}
+	printf("\nRemovendo %d ", l->info);
+	free(l);
+}
