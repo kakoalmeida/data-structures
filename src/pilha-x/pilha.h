@@ -11,9 +11,10 @@ typedef struct pilha{
 } Pilha;
 
 Pilha* pilha_cria();
-void pilha_push(Pilha* p);
-float pilha_pop(Pilha* p);
+void pilha_push(Pilha* p, int v);
+int pilha_pop(Pilha* p);
 void imprimir(Pilha* p);
 void pilha_apaga(Pilha* p);
+int pilha_vazia(Pilha* p);
 
 #endif
