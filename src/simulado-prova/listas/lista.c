@@ -23,3 +23,23 @@ void imprimir(Lista* l){
     for(p = l; p != NULL; p = p->prox)
         printf("Valor de info: %d\n", p->info);
 }
+
+Lista* inserir_final(Lista* l, int n){
+    Lista* p = (Lista*) malloc (sizeof(Lista));
+    Lista* ultimo;
+    
+    p->info = n;
+    p->prox = NULL;
+
+    if(l == NULL)
+        return p;
+
+    ultimo = l;
+    while(ultimo->prox != NULL){
+        ultimo = ultimo->prox;    
+    }
+
+    ultimo->prox = p;
+
+    return l;
+}

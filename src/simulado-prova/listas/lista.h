@@ -12,5 +12,6 @@ typedef struct lista{
 Lista* cria_lista();
 Lista* inserir_lista(Lista* l, int v);
 void imprimir(Lista* l);
+Lista* inserir_final(Lista* l, int n);
 
 #endif

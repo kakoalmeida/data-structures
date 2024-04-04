@@ -23,5 +23,9 @@ int main(){
     } else
         printf("\nElemento nao encontrado\n");
 
+    l = remove_elemento(l, 3);
+
+    imprimir(l);
+    
     return 0;
 }

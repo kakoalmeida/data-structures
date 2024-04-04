@@ -15,5 +15,6 @@ Lista* inserir_lista(Lista* l, int v);
 void imprimir(Lista* l);
 Lista* busca_elemento(Lista* l, int v);
 int lista_vazia(Lista* l);
+Lista* remove_elemento(Lista* l, int v);
 
 #endif

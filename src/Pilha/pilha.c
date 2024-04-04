@@ -6,13 +6,13 @@ Pilha *pilha_cria () {
     p->n = 0; /* inicializa com zero elementos */
     return p;
 }
-
+//
 /* insere no topo */
 void pilha_push (Pilha *p, float v) {
     if (p->n == N) { /* capacidade esgotada */
         printf("Capacidade da pilha estourou.\n");
         exit(1); /* aborta programa */
-    } /* insere elemento na próxima posição livre */
+    } /* insere elemento na prï¿½xima posiï¿½ï¿½o livre */
     p->vet[p->n] = v;
     p->n++; /* equivalente a: p->n = p->n + 1 */
 }
@@ -51,7 +51,7 @@ Pilha *pilha_intercalar(Pilha* p1, Pilha* p2) {
     return p;
 }
 
-/* função imprime: imprime valores dos elementos */
+/* funï¿½ï¿½o imprime: imprime valores dos elementos */
 void vet_imprime (Pilha *p) {
     int i = p->n - 1;
     for ( ; i >= 0; i--)

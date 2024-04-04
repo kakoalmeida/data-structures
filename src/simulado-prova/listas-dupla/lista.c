@@ -34,3 +34,29 @@ Lista* busca_elemento(Lista* l, int v){
     }
     return NULL;
 }
+
+Lista* remove_elemento(Lista* l, int v){
+
+    Lista* p;
+
+    if(l != NULL){
+        if(l->info == v){
+            p = l->prox;
+            p->ant = NULL;
+            free(l);
+            return p;
+        }
+
+    for(p = l->prox; p != NULL; p = p->prox){
+         if(p->info == v){
+            p->ant->prox = p->prox;
+            if(p->prox != NULL)
+                p->prox->ant = p->ant;
+                free(p);
+                break;
+            }
+        }
+    }
+
+    return l;
+}
